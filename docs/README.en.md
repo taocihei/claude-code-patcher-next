@@ -1,5 +1,13 @@
 # Claude Code Patcher Next
 
+<p align="center">
+  <a href="../LICENSE"><img alt="许可证" src="https://img.shields.io/github/license/taocihei/claude-code-patcher-next?style=for-the-badge"></a>
+  <a href="https://github.com/taocihei/claude-code-patcher-next/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/taocihei/claude-code-patcher-next?style=for-the-badge"></a>
+  <a href="README.zh-CN.md"><img alt="中文文档" src="https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-blue?style=for-the-badge"></a>
+  <a href="README.en.md"><img alt="English Docs" src="https://img.shields.io/badge/docs-English-green?style=for-the-badge"></a>
+  <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-2.0.x%20%7C%202.1.x-purple?style=for-the-badge">
+</p>
+
 [English](README.en.md) | [简体中文](README.zh-CN.md)
 
 Claude Code Patcher Next is a version-aware patch manager for Claude Code. It
