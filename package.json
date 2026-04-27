@@ -1,0 +1,18 @@
+{
+  "name": "claude-code-patcher-next",
+  "version": "0.1.0",
+  "description": "Version-aware Claude Code patch manager for legacy cli.js builds and modern native-binary builds.",
+  "type": "module",
+  "bin": {
+    "ccpatch-next": "src/cli.js"
+  },
+  "scripts": {
+    "doctor": "node src/cli.js doctor",
+    "dry-run": "node src/cli.js patch thinking --dry-run",
+    "test": "node src/cli.js doctor && node src/cli.js config show"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
