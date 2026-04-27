@@ -2,62 +2,26 @@
 
 Version-aware patch manager for Claude Code.
 
-This project is intentionally conservative:
+## Languages
 
-- Claude Code 2.0.x legacy `cli.js` builds can be patched with string patches.
-- Claude Code 2.1.x native binary builds are detected and reported, but not binary-patched.
-- Backups are created before modifying legacy `cli.js`.
-- `--dry-run` and `--restore` are supported.
+- [English](docs/README.en.md)
+- [简体中文](docs/README.zh-CN.md)
 
-## Why 2.1.x Is Different
+## Quick Summary
 
-Claude Code 2.1.x changed the npm package layout. On Windows, the package entry is:
+Claude Code Patcher Next detects your Claude Code installation and safely handles
+legacy JavaScript patch workflows.
 
-```text
-bin/claude.exe
-```
+- Claude Code 2.0.x legacy `cli.js` builds can be patched.
+- Claude Code 2.1.x native binary builds are detected but not binary-patched.
+- `--dry-run`, backup, restore, and subagent model config helpers are included.
 
-Older patch projects modify:
+## Attribution
 
-```text
-cli.js
-```
-
-Those approaches are not equivalent. This tool refuses to patch native binaries.
-
-## Commands
-
-```powershell
-node src/cli.js doctor
-node src/cli.js patch thinking --dry-run
-node src/cli.js patch thinking
-node src/cli.js patch thinking --restore
-
-node src/cli.js config show
-node src/cli.js config set --plan sonnet --explore haiku --general sonnet
-node src/cli.js patch subagents --dry-run
-node src/cli.js patch subagents
-node src/cli.js patch subagents --restore
-```
-
-## Local Test
-
-```powershell
-npm test
-```
-
-## Current Behavior On Claude Code 2.1.119
-
-`doctor` should report:
-
-```text
-Layout: native
-Version: 2.1.119
-Binary: ...\bin\claude.exe
-Status: supported for detection/config only. Native binary patching is intentionally disabled.
-```
-
-That is expected.
+This project was inspired by and references the patching approach from
+[aleks-apostle/claude-code-patches](https://github.com/aleks-apostle/claude-code-patches).
+The implementation here is rewritten with version-aware detection and explicit
+native-binary safety checks.
 
 ## License
 
